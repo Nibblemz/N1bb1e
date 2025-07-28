@@ -311,4 +311,366 @@ header nav ul li:hover::after{
     left: 70%;
 }
 
+/* MOBILE FIRST AJUSTES */
+
+body {
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 16px 0 16px;
+    width: 100vw;
+}
+
+header nav ul {
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.container {
+    padding-top: 100px;
+    height: auto;
+    min-height: 100vh;
+}
+
+.list {
+    width: 100%;
+    min-height: 400px;
+}
+
+.item {
+    flex-direction: column;
+    position: static;
+    margin-bottom: 32px;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.product-img img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.content {
+    width: 100%;
+    padding: 0 8px;
+    align-items: flex-start;
+}
+
+.product-name {
+    font-size: 2rem;
+}
+
+.description {
+    font-size: 1rem;
+    max-width: 100%;
+}
+
+.btn-cont {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+}
+
+.arrows {
+    width: 100%;
+    top: unset;
+    bottom: 100px;
+    left: 0;
+    transform: none;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.arrow-btn {
+    width: 40px;
+    height: 40px;
+}
+
+.indicators {
+    bottom: 16px;
+}
+
+.numbers {
+    font-size: 2rem;
+}
+
+.dots {
+    gap: 6px;
+}
+
+.dot {
+    width: 20px;
+    height: 4px;
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 32px;
+    }
+    header nav ul {
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+    }
+    .container {
+        padding-top: 120px;
+    }
+    .product-img img {
+        max-height: 300px;
+    }
+    .product-name {
+        font-size: 3rem;
+    }
+    .arrows {
+        bottom: 60px;
+        padding: 0 32px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    header {
+        padding: 20px 50px;
+        width: 90vw;
+    }
+    .container {
+        padding-top: 0;
+        height: 100vh;
+    }
+    .list {
+        width: 80%;
+    }
+    .item {
+        flex-direction: row;
+        position: absolute;
+        margin-bottom: 0;
+    }
+    .product-img {
+        width: 45%;
+        height: 100%;
+        margin-bottom: 0;
+    }
+    .product-img img {
+        max-width: 80%;
+        max-height: 60%;
+    }
+    .content {
+        width: 55%;
+        padding-right: 80px;
+    }
+    .product-name {
+        font-size: 4.5rem;
+    }
+    .description {
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
+    .btn-cont {
+        width: auto;
+        padding: 12px 10px;
+    }
+    .arrows {
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: unset;
+        padding: 0;
+    }
+    .arrow-btn {
+        width: 50px;
+        height: 50px;
+    }
+    .indicators {
+        bottom: 40px;
+    }
+    .numbers {
+        font-size: 3rem;
+    }
+    .dots {
+        gap: 10px;
+    }
+    .dot {
+        width: 40px;
+    }
+}
+
+@media (max-width: 899px) {
+    .item {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        inset: 0;
+        margin-bottom: 0;
+        min-height: unset;
+        padding: 0;
+    }
+    .product-img {
+        width: 45%;
+        height: 100%;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .product-img img {
+        max-width: 80%;
+        max-height: 60%;
+    }
+    .content {
+        width: 55%;
+        padding: 0 0 0 12px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .content {
+        align-items: center !important;
+        text-align: center;
+    }
+    .btn-cont {
+        display: block;
+        width: 60%;
+        max-width: 160px;
+        min-width: 100px;
+        padding: 10px 0;
+        font-size: 0.95rem;
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0,247,255,0.10);
+        position: absolute;
+        left: 50%;
+        bottom: 120px;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 4px 0;
+    background: #00f7ff;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+
+/* Overlay do menu aberto */
+#nav-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 15, 30, 0.98);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border-radius: 0;
+    padding: 0;
+    z-index: 100;
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+#nav-menu.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+#nav-menu ul {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+#nav-menu ul li {
+    font-size: 2rem;
+    color: #00f7ff;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color 0.2s;
+}
+#nav-menu ul li:hover {
+    color: #fff;
+}
+
+.hamburger {
+    z-index: 200;
+}
+
+
+@media (min-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+    #nav-menu {
+        display: flex !important;
+        position: static;
+        background: none;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    #nav-menu ul {
+        flex-direction: row;
+        gap: 48px;
+        align-items: center;
+    }
+    #nav-menu ul li {
+        font-size: 1rem;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        letter-spacing: normal;
+    }
+}
+
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 

@@ -51,3 +51,21 @@ prevButtom.addEventListener('click', () => {
 nextButtom.addEventListener('click', () => {
     update(1)
 })
+
+// MENU HAMBURGUER
+const hamburger = document.getElementById('hamburger-menu');
+const navMenu = document.getElementById('nav-menu');
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('open');
+    });
+    // Fecha o menu ao clicar em um item (opcional)
+    navMenu.querySelectorAll('li').forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('open');
+        });
+    });
+}
